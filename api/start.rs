@@ -10,6 +10,6 @@ async fn main() -> Result<(), Error> {
 
 async fn handler(_req: Request) -> Result<Value, Error> {
     Ok(json!({
-        "time": SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_millis(),
+        "time": SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_micros(),
     }))
 }
